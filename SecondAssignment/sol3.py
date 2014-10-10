@@ -1,0 +1,2 @@
+def groupby(func, seq):
+    
