@@ -1,0 +1,22 @@
+1.Make a github repo
+2.cd HackBulgaria
+3.git init
+4.git add. #vsichki failove v papkite ili add file.py
+5.git commit -m "Add first file" #or some other name
+6.git remote add origin https:// ....
+7.git pull origin master
+8.git push origin master
+
+Adding file
+1. creating file
+2. git add name of file
+3. git commit -m "Adding file"
+4. git push origin master
+
+Delete file
+1. git rm name of file
+2. git commit -m "Deleting file"
+3. git push origin master
+
+Always when you commit something u have to push it inside GitHub
+git status checking the status of our git
