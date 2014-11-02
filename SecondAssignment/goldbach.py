@@ -11,15 +11,17 @@ def is_prime(n):
 def goldbach(n):
     primeNumbers = []
     goldbachResult = []
-    for prime in range(1, n):
-        if is_prime(prime):
-            primeNumbers.append(prime)
+    if n > 2 and n % 2 == 0:
+            for prime in range(1, n):
+                if is_prime(prime):
+                    primeNumbers.append(prime)
 
-    for el in range(0, len(primeNumbers)):
-        for nextEl in range(el, len(primeNumbers)):
-            if primeNumbers[el] + primeNumbers[nextEl] == n:
-                tup = (primeNumbers[el], primeNumbers[nextEl])
-                goldbachResult.append(tup)
-    return goldbachResult
+            for el in range(0, len(primeNumbers)):
+                for nextEl in range(el, len(primeNumbers)):
+                    if primeNumbers[el] + primeNumbers[nextEl] == n:
+                        tup = (primeNumbers[el], primeNumbers[nextEl])
+                        goldbachResult.append(tup)
+            return goldbachResult
+    else:
+        return False
 
-print(goldbach(100))

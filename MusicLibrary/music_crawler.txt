@@ -1,0 +1,37 @@
+{
+    "Name": "My Playlist",
+    "Songs": [
+        {
+            "album": "Mein Land",
+            "artist": "Rammstein",
+            "bitrate": 320000,
+            "length": 232.675825,
+            "rating": 3,
+            "title": "Mein Land"
+        },
+        {
+            "album": "Mein Land",
+            "artist": "Rammstein",
+            "bitrate": 320000,
+            "length": 250.5697,
+            "rating": 3,
+            "title": "Vergiss Uns Nicht"
+        },
+        {
+            "album": "Mein Land",
+            "artist": "Rammstein",
+            "bitrate": 320000,
+            "length": 247.48725,
+            "rating": 3,
+            "title": "My Country (The BossHoss)"
+        },
+        {
+            "album": "Mein Land",
+            "artist": "Rammstein",
+            "bitrate": 320000,
+            "length": 271.441525,
+            "rating": 3,
+            "title": "Mein Land (Mogwai Mix)"
+        }
+    ]
+}
