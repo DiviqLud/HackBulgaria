@@ -3,13 +3,12 @@ import sqlite3
 
 class Movies():
     def __init__(self, cursor):
-        result = cursor.execute(''' SELECT id, name, rating
-                                    FROM Movies''')
+        result = cursor.execute('''SELECT id, name, rating
+                                       FROM Movies''')
         for row in result:
             self.id = row['id']
             self.name = row['name']
             self.rating = row['rating']
-
 
     def add_movie(self, cursor, conn):
         name = input("Name of movie: ")
