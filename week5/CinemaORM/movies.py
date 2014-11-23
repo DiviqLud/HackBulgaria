@@ -1,7 +1,5 @@
 from base import Base
 from sqlalchemy import Column, Integer, String, Float
-#from sqlalchemy.orm import Session
-#from sqlalchemy.orm import relationship
 
 
 class Movie(Base):

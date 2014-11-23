@@ -34,8 +34,8 @@ class Cinema():
     def add_projections(self):
         movie_id = input("Movie id: ")
         print("Adding new projection to the database via the session object")
-        projection_date = datetime.datetime(2014, 11, 24, 21, 30) # trqbva da si napravq funkciq koqto zadava dannite
-        projection = Projection(movie_type="3D",                    # ot funkciqta datetime
+        projection_date = self.time()
+        projection = Projection(movie_type="3D",
                                 date_time=projection_date,
                                 movie_id=movie_id)
         self.__session.add(projection)
@@ -163,3 +163,11 @@ class Cinema():
             Reservation.username == name).delete()
         self.__session.commit()
 
+    def time(self):
+        year = input("Year: ")
+        month = input("Month: ")
+        day = input("Day: ")
+        hour = input("Hour: ")
+        mins = input("Minutes: ")
+        projection_date = datetime.datetime(year, month, day, hour, mins)
+        return projection_date

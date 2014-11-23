@@ -1,11 +1,10 @@
 from base import Base
-from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
 
 
-class Reservation(Base):  # da mi izlezne table vuv bazata danni
+class Reservation(Base):
     __tablename__ = "reservations"
     id = Column(Integer, primary_key=True)
     username = Column(String)
