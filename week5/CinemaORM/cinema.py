@@ -41,14 +41,15 @@ class Cinema():
         self.__session.add(projection)
         self.__session.commit()
 
-    def show_movie_projections_by_id(self, movie_id):
+    def show_movie_projections(self, movie_id):
         self.select_title(movie_id)
         self.select_projections(movie_id)
 
     def select_title(self, movie_id):
         movie_name = self.__session.query(
             Movie).filter(Movie.id == movie_id).one()
-        print("Projections for " + movie_name.name)
+        result = "Projections for " + movie_name.name
+        return result
 
     def select_projections(self, movie_id):
         projections = self.__session.query(Projection).filter(
@@ -157,21 +158,8 @@ class Cinema():
 
         self.all_seats = []
 
-    def give_up(self):
-            print("You can give up if you want!")
-            give_up = input("Enter command for give up> ")
-            if give_up == "give up":
-                self.menu()
+    def cancel_reservation(self, name):
+        self.__session.query(Reservation).filter(
+            Reservation.username == name).delete()
+        self.__session.commit()
 
-
-    def menu(self):
-        print(''' Welcome to your cinema!
-                  Here are the things you can do:
-                        1. add_movie
-                        2. show_movies
-                        3. add_projection
-                        4. show_movie_projections <movie_id>
-                        5. show_movie_projections_by_date <movie_id> <date_time>
-                        6. make_reservation''')
-        command = input("Enter your choice: ")
-        return command
