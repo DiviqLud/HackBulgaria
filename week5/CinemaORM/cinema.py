@@ -99,7 +99,7 @@ class Cinema():
 
     def show_seats(self, projection_id):
         seats = self.__session.query(
-            Reservation.col, Reservation.col).filter(
+            Reservation.row, Reservation.col).filter(
             Reservation.projection_id == projection_id).all()
 
         self.seats = [[". " for x in range(11)] for x in range(11)]
