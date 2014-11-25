@@ -1,0 +1,27 @@
+{
+    "Name": "My Playlist",
+    "Songs": [{
+                "album": "Forever",
+                "artist": "Akon",
+                "bitrate": 64,
+                "length": 220,
+                "rating": 3,
+                "title": "Lonely"
+                },
+                {
+                "album": "Truly",
+                "artist": "Diddy",
+                "bitrate": 164,
+                "length": 180,
+                "rating": 4,
+                "title": "Bad girl"
+                },
+                {
+                "album": "Never",
+                "artist": "Snoop Dogg",
+                "bitrate": 256,
+                "length": 210,
+                "rating": 5,
+                "title": "Last Night"
+                }]
+}
