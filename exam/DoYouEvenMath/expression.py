@@ -38,7 +38,7 @@ class Expression():
             return False
 
     def return_result(self):
-        return self.result
+        return self.result*self.result
 
 
 def main():
